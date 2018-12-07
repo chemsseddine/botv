@@ -34,12 +34,15 @@ class Output:
     def templates(self):
         return self.__templates
 
+
     def add_entity(self, **kwgs):
         for key,value in kwgs.items():
             self.__entities[key] = value
+        return self.__body
 
     def add_response(self, response):
         self.__output['response'] = response
+        return self.__body
 
     def add_qr(self, quick_replies=None):
         keys = ['targetIntent', 'text', 'title', 'type']
@@ -48,6 +51,7 @@ class Output:
                 if key not in quick_reply:
                     raise ValueError('Quick Reply should have these keys : targetIntent, text, title, type')
         self.__quickReplies.extend(quick_replies)
+        return self.__body
 
     def add_template(self, templates=None):
         keys = ['action_url', 'image_url', 'subtitle', 'title']
@@ -56,6 +60,7 @@ class Output:
                 if key not in template:
                     raise ValueError('Facebook template should have these keys : action_url, image_url, subtitle, title')
         self.__templates.extend(templates)
+        return self.__body
 
 
 
