@@ -3,13 +3,13 @@ from distutils.core import setup
 setup(
   name = 'botv',
   packages = ['botv'],
-  version = '2.0',
+  version = '2.1',
   license='MIT',
   description = 'Easy to use dict constructor for botv.io usage',
   author = 'Chemss Eddine Ben Hassine',
   author_email = 'bhchemss@gmail.com',
   url = 'https://github.com/chemsseddine/',
-  download_url = 'https://github.com/chemsseddine/botv/archive/v2.0.tar.gz',
+  download_url = 'https://github.com/chemsseddine/botv/archive/v2.1.tar.gz',
   classifiers=[
     'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers',
