@@ -1,7 +1,7 @@
 class Output:
 
     def __repr__(self):
-        return repr(self.__body)
+        return self.__body
 
 
     def __init__(self, response=None):
