@@ -1,8 +1,5 @@
 class Output:
 
-    def __repr__(self):
-        return self.__body
-
 
     def __init__(self, response=None):
         self.__response= response
@@ -19,7 +16,7 @@ class Output:
                 entities = self.__entities
                 )
     @property
-    def body(self):
+    def as_dict(self):
         return self.__body
 
     @property
