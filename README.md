@@ -13,7 +13,7 @@ message = Output()
 message.as_dict
 ```
 ```
-> {'entities': {}, 'output': {'response': None, 'templates': [], 'quickReplies': []}}
+> {'output': {}}
 ```
 
 ### Entities
@@ -21,7 +21,7 @@ message.as_dict
 message.add_entity(entity1="value1", entity2="value2")
 ```
 ```
-> {'entities': {'entity1':'value1', 'entity2':'value2'}, 'output': {'response': None, 'templates': [], 'quickReplies': []}}
+> {'entities': {'entity1':'value1', 'entity2':'value2'}, 'output': {}}
 ```
 ### Response
 
@@ -29,7 +29,7 @@ message.add_entity(entity1="value1", entity2="value2")
 message.add_response('some response')
 ```
 ```
-> {'entities': {'entity1':'value1', 'entity2':'value2'}, 'output': {'response': 'some response', 'templates': [], 'quickReplies': []}}
+> {'entities': {'entity1':'value1', 'entity2':'value2'}, 'output': {'response': 'some response'}
 ```
 ```
 # Or when instantiating the object message
