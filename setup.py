@@ -4,7 +4,7 @@ from os import path
 setup(
   name = 'botv',
   packages = ['botv'],
-  version = '2.4',
+  version = '2.5',
   license='MIT',
   description = 'Easy to use dict constructor for botv.io usage',
   long_description ='# Easy to use dict constructor for botv.io usage',
@@ -12,7 +12,7 @@ setup(
   author = 'Chemss Eddine Ben Hassine',
   author_email = 'bhchemss@gmail.com',
   url = 'https://github.com/chemsseddine/',
-  download_url = 'https://github.com/chemsseddine/botv/archive/v2.4.tar.gz',
+  download_url = 'https://github.com/chemsseddine/botv/archive/v2.5.tar.gz',
   classifiers=[
     'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers',

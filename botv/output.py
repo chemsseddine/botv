@@ -58,23 +58,17 @@ class Output:
         return self.as_dict
 
     def add_qr(self, quick_replies, platform="facebook"):
+        keys = ['targetIntent', 'text', 'title', 'replyType']
+        assert  quick_replies and all(key in keys for key in [[*i] for i in quick_replies][0]) ,"check your quick reply object"
         self.__output[platform] = self.__platform 
-        keys = ['targetIntent', 'text', 'title', 'type']
-        for key in keys:
-            for quick_reply in quick_replies:
-                if key not in quick_reply:
-                    raise ValueError('Quick Reply should have these keys : targetIntent, text, title, type')
         self.__quickReplies.extend(quick_replies)
         self.__output[platform]["quickReplies"] = self.__quickReplies
         return self.as_dict
 
     def add_template(self,templates, platform="facebook"):
         self.__output[platform] = self.__platform 
-        keys = ['action_url', 'image_url', 'subtitle', 'title']
-        for key in keys:
-            for template in templates:
-                if key not in template:
-                    raise ValueError('Facebook template should have these keys : action_url, image_url, subtitle, title')
+        keys = ['actionUrl', 'imageUrl', 'subtitle', 'title']
+        assert templates and all(key in keys for key in [[*i] for i in templates][0]),"check your quick template object"
         self.__templates.extend(templates)
         self.__output[platform]["templates"] = self.__templates
         return self.as_dict
